@@ -63,7 +63,7 @@ d3.json('jan_json').then(data => {
         series.events.on("shown", arrangeColumns);
     
         var bullet = series.bullets.push(new am4charts.LabelBullet())
-        bullet.interactionsEnabled = true
+        bullet.interactionsEnabled = false
         bullet.dy = 5;
         bullet.label.text = '{valueY}'
         bullet.label.fill = am4core.color('#000000')
