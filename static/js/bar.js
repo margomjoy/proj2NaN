@@ -64,7 +64,7 @@ d3.json('jan_json').then(data => {
     
         var bullet = series.bullets.push(new am4charts.LabelBullet())
         bullet.interactionsEnabled = false
-        bullet.dy = 5;
+        bullet.dy = 0;
         bullet.label.text = '{valueY}'
         bullet.label.fill = am4core.color('#000000')
     
@@ -132,10 +132,10 @@ d3.json('jan_json').then(data => {
     
     
     createSeries('first', 'Landed');
-    createSeries('second', 'active');
-    createSeries('third', 'diverted');
-    createSeries('fourth', 'scheduled');
-    createSeries('fifth', 'cancelled');
+    createSeries('second', 'Active');
+    createSeries('third', 'Diverted');
+    createSeries('fourth', 'Scheduled');
+    createSeries('fifth', 'Cancelled');
     
     function arrangeColumns() {
     
