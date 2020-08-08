@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>SkySource</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons-->
+  <link href="assets/img/favicon.png" rel="icon">
+  <!--<link href="{{url_for('static', filename='assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon"> -->
+  <link rel="icon" href="{{url_for('static', filename='assets/img/favicon.png')}}">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static', filename='assets/css/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: BizLand - v2.0.0
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom CSS-->
+
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v5.js"></script>
+
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+    <!--Bar Chart-->
+    <!-- Styles -->
+  <style>
+    #chartdiv {
+      width: 100%;
+      height: 500px;
+    }
+    </style>
+    
+    <!-- Resources -->
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/dark.js"></script>
+    
+    
+  <!--D3-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.js"></script>
+ <!--Plotly-->
+ <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto">SkySource <span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          
+          <li><a href="#services">Global Performance</a></li>
+          <li><a href="#portfolio">Airline/Airport</a></li>
+          <li><a href="#pricing">Monthly</a></li>
+          <li><a href="#covid">Covid-19 Impact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#testimonials">Lessons Learned</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  
+
+
+
+
+
+<!-- Bootstrap JavaScript -->>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1>Welcome to SkySource
+      </h1>
+      <h2>We are team of talanted designers/developers/analysts working hard every minute</h2>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+   
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{{url_for('static', filename='assets/img/delta.png')}}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{{url_for('static', filename='assets/img/hawaiin.png')}}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{{url_for('static', filename='assets/img/united.png')}}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{{url_for('static', filename='assets/img/jetblue.png')}}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{{url_for('static', filename='assets/img/alaska.png')}}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{{url_for('static', filename='assets/img/southwest-airlines-squarelogo-1411584571986.png')}}" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Global Airline Performance ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Global Airline Performance</h2>
+          
+          <p>Here is an overview of the last few months performance of the airlines. </p>
+          
+        </div>
+
+        <div class="row">
+          
+         <!--BAR PLOT-->
+         <div id="chartdiv"></div> 
+
+        </div>
+
+      </div>
+    </section><!--  Global Airline Performance  -->
+
+    
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Airport/Airlines</h2>
+          <p>we need two vizualizations here with filters - illana is working on this one. </p>
+        </div>
+        <!-- Airline cancellations div -->
+        <div id='airline_cancellations' style="width: 100%; height: 600px;"></div>
+        <!-- Airport cancellations div -->
+      <div id='airport_cancellations' style="width: 100%; height: 600px;"></div>
+      </div>
+    </section><!-- End airport/airline Section -->
+
+  
+
+    <!-- ======= overall monthly delays ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Firstday of each month</h2>
+          
+          <p>a graph or viz for first day of each month analysis</p>
+        </div>
+
+
+         <!-- Monthly delays div -->      
+        <div id='monthly-delays' style="width: 100%; height: 600px;"></div>
+
+    
+
+      </div>
+    </section><!-- End first day of each month Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Global Monthly Cancellations</h2>
+          
+          <p>a graph or viz for first day of each month analysis</p>
+          <!-- SRI! Add this to index.html-->
+          <div id="radialdiv" style="width: 100%; height: 600px;"></div>	
+            <!-- SRI! Add this to index.html-->
+            <!--Radial Histogram-->
+            <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+            <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+            <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Skills Section -->
+
+    
+    <!-- ======= capacity Section ======= -->
+    <section id="covid" class="covid">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <div class="section-title">
+        <h2>Covid-19 and Flight Capacity</h2>
+        
+        <p>a graph or viz for first day of each month analysis</p>
+      </div>
+      <div id="capacitydiv" style="width: 100%; height: 600px;"></div>	
+    </div>
+  </section><!-- capacity Hero -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+
+        <div class="row">
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3></h3>
+            <p class="font-italic">
+              The data used in our project was gathered from the Federal Aviation Administration (FAA), United States Department of Transportation, Bureau of Transportation Statistics, OAG, and an API called Aviation Stack. With this information, we drew many analyses to identify the impact of Covid-19 on the aviation industry.
+            </p>
+            
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+    <!-- ======= Lessons Learned Section ======= -->
+    <section id="testimonials" class="testimonials">
+      
+      <div class="container" data-aos="zoom-in">
+        <div class="section-title">
+          <h2>Lessons Learned</h2>
+          
+        </div>
+        <div class="owl-carousel testimonials-carousel">
+
+          <div class="testimonial-item">
+            <img src="{{url_for('static', filename='assets/img/testimonials/testimonials-1.jpg')}}" class="testimonial-img" alt="">
+            <h3>Ilana Multak </h3>
+            <h4>Team Member &amp; Founder &amp; Developer</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              If there’s one thing that I would advise to someone who is creating a web-application, I would emphasize the importance of analyzing the available data to tell a story instead of planning a wonderful story in your head, and not be able to execute it
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="{{url_for('static', filename='assets/img/testimonials/testimonials-2.jpg')}}" class="testimonial-img" alt="">
+            <h3>Kandra Romanowski</h3>
+            <h4>Team Member &amp; Founder &amp; Developer</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Even though I am a Jedi, I have a lot of coding to learn.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="{{url_for('static', filename='assets/img/testimonials/testimonials-3.jpg')}}" class="testimonial-img" alt="">
+            <h3>Joisel Martinez</h3>
+            <h4>Team Member &amp; Founder &amp; Developer</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              May the Data be with you!
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="{{url_for('static', filename='assets/img/testimonials/testimonials-4.jpg')}}" class="testimonial-img" alt="">
+            <h3>SriHaritha Mantrala</h3>
+            <h4>Team Member &amp; Founder &amp; Developer</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Start early, expect hurdles. As they say when going gets tough , tough gets going :) 
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="{{url_for('static', filename='assets/img/testimonials/testimonials-5.jpg')}}" class="testimonial-img" alt="">
+            <h3>Dartanion Williams</h3>
+            <h4>Teacher &amp; Supporter &amp; SuperHero!</h4>
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              'Everyone, please refresh your repository' 'Let's open our hit lists.' 
+              'You shared your screen?' 'Are you sharing screen?' 'OH NoO! I didn't for the whole time?' 'Give me a moment..'
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>GWU BOOTCAMP 2020</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{url_for('static', filename='assets/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/vendor/counterup/counterup.min.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/vendor/venobox/venobox.min.js')}}"></script>
+  <script src="{{url_for('static', filename='assets/vendor/aos/aos.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+   <!-- Template bar JS File -->
+   <script src="{{url_for('static', filename='js/bar.js')}}"></script>
+<!-- Your custom JavaScript -->
+<script src="{{url_for('static', filename='js/app.js')}}"></script>
+<!-- Your radial histogram JavaScript -->
+<script src="{{url_for('static', filename='js/radialhst.js')}}"></script>
+<!-- Your radial capacity JavaScript -->
+<script src="{{url_for('static', filename='js/logic.js')}}"></script>
+</body>
+
+</html>
