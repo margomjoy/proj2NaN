@@ -27,7 +27,7 @@ d3.json('/api/data/monthly_cancellations').then(data => {
 
   let labelTemplate = categoryAxis.renderer.labels.template;
   labelTemplate.radius = am4core.percent(-100);
-  labelTemplate.location = 0.9;
+  labelTemplate.location = 2;
   labelTemplate.relativeRotation = 30;
 
   var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
