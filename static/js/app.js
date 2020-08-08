@@ -70,7 +70,7 @@ d3.json('/api/data/airline_cancellations').then(data => {
     x: cancellations,
     y: airline_name,
     text: cancellations.map(String),
-    orientation: 'h'
+    //orientation: 'h'
   }];
   
   var layout = {
@@ -109,7 +109,10 @@ d3.json('/api/data/airport_cancellations').then(data => {
     x: cancellations,
     y: airport_name,
     text: cancellations.map(String),
-    orientation: 'h'
+    //orientation: 'h'
+    marker: {
+    color: 'rgb(135, 206, 235)'
+    }
   }];
   
   var layout = {
