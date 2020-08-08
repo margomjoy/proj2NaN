@@ -26,7 +26,7 @@ d3.json('/api/data/monthly_cancellations').then(data => {
   categoryAxis.renderer.grid.template.disabled = true;
 
   let labelTemplate = categoryAxis.renderer.labels.template;
-  labelTemplate.radius = am4core.percent(-10);
+  labelTemplate.radius = am4core.percent(-80);
   labelTemplate.location = 0.5;
   labelTemplate.relativeRotation = 30;
 
