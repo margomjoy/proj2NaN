@@ -67,10 +67,13 @@ d3.json('/api/data/airline_cancellations').then(data => {
 
   var data = [{
     type: 'bar',
-    x: cancellations,
-    y: airline_name,
+    x: airline_name,
+    y: cancellations,
     text: cancellations.map(String),
     //orientation: 'h'
+    marker: {
+      color: 'rgb(135, 206, 235)'
+    }
   }];
   
   var layout = {
@@ -106,8 +109,8 @@ d3.json('/api/data/airport_cancellations').then(data => {
 
   var data = [{
     type: 'bar',
-    x: cancellations,
-    y: airport_name,
+    x: airport_name,
+    y: cancellations,
     text: cancellations.map(String),
     //orientation: 'h'
     marker: {
