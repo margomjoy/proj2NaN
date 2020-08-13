@@ -7,7 +7,7 @@ var chart = am4core.create("capacitydiv", am4charts.XYChart);
 
 // Title
 var title = chart.titles.push(new am4core.Label());
-title.text = "Covid-19 & Flight Capacity";
+title.text = "Change in Global Scheduled Flights Compared to Previous Year (2020 vs. 2019)";
 title.fontSize = 25;
 title.marginBottom = 15;
 
