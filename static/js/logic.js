@@ -7,7 +7,7 @@ var chart = am4core.create("capacitydiv", am4charts.XYChart);
 
 // Title
 var title = chart.titles.push(new am4core.Label());
-title.text = "Change in Globallly Scheduled Flights Compared to the Same Week of the Previous Year.";
+title.text = "Change in Globally Scheduled Flights Compared to the Same Week of the Previous Year.";
 title.fontSize = 25;
 title.marginBottom = 15;
 
